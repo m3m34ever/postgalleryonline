@@ -8,20 +8,16 @@
     <title>Offline Fallback Page Demo</title>
 
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- import the webpage's javascript file -->
     <script src="script.js" defer></script>
   </head>
   <body>
-    <h1>Hi there</h1>
-
-    <p>
-      Try reloading this page when you have disconnected from the internet
-    </p>
-
+<img class="main" src="media/main.gif">
+<img class="title" src="media/DoB-TIITER-5_162px.gif">
     <video class="hidden" controls width="100%" autoplay muted
-    src="video.mp4">
+    src="media/video.mp4">
 </video>
 
 
@@ -30,7 +26,7 @@
         one: document.querySelector('video')
       };
   
-      const videoRequest = fetch('video.mp4').then(response => response.blob());
+      const videoRequest = fetch('media/video.mp4').then(response => response.blob());
       videoRequest.then(blob => {
         const request = indexedDB.open('yourpage.php', 1);
   

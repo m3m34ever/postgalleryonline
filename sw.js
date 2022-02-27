@@ -12,7 +12,7 @@ workbox.clientsClaim();
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open('video')
-      .then(c => c.add('test.mp4'))
+      .then(c => c.add('media/video.mp4'))
   );
 });
 
